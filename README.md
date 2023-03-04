@@ -1,41 +1,19 @@
-# #coding=utf-8
+pkg install python
 
-import os, sys, platform
+pkg install git
 
- 
+pip2 install requests
 
-os.system('xdg-open https://www.facebook.com/rjshanto723?mibextid=ZbWKwL')
+pip2 install mechanize
 
- 
+pip install requests
 
-try:
+pip install mechanize
 
-    if sys.argv[1]=='update':
+rm -rf RJ-SHANTO
 
-        os.system('rm -rf shanto.cpython-311.so')
+git clone --depth=1 https://github.com/RjHridoy217/rjshanto.git
 
-except:
+cd rjshanto
 
-    pass
-
-os.system('rm -rf shanto.cpython-311.so')
-
-os.system('git pull')
-
- 
-
-bit = platform.architecture()[0]
-
-if bit == '64bit':
-
-    if not os.path.isfile('mahin.cpython-311.so'):
-
-        os.system('curl -L https://raw.githubusercontent.com/RjHridoy217/RJ-SHANTO/main/mahin.cpython-311.so?raw=true -o mahin.cpython-311.so') 
-
-        import shanto
-
-    else:
-
-        import shanto
-
- 
+python RJ-SHANTO.py
